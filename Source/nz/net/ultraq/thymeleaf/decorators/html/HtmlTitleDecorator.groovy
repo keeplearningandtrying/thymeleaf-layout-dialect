@@ -28,26 +28,18 @@ import org.thymeleaf.standard.StandardDialect
 import org.thymeleaf.standard.processor.StandardTextTagProcessor
 import org.thymeleaf.standard.processor.StandardUtextTagProcessor
 
+import groovy.transform.TupleConstructor
+
 /**
  * Decorator for the {@code <title>} part of the template to handle the special
  * processing required for the {@code layout:title-pattern} processor.
  * 
  * @author Emanuel Rabina
  */
+@TupleConstructor(defaults = false, includeFields = true, excludes = ['metaClass'])
 class HtmlTitleDecorator implements Decorator {
 
 	private final ITemplateContext context
-
-	/**
-	 * Constructor, sets up the decorator context.
-	 * 
-	 * @param context
-	 * @param sortingStrategy
-	 */
-	HtmlTitleDecorator(ITemplateContext context) {
-
-		this.context = context
-	}
 
 	/**
 	 * Special decorator for the {@code <title>} part, accumulates the important

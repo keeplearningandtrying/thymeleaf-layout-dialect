@@ -22,25 +22,18 @@ import org.thymeleaf.context.ITemplateContext
 import org.thymeleaf.engine.TemplateModel
 import org.thymeleaf.standard.expression.FragmentExpression
 
+import groovy.transform.TupleConstructor
+
 /**
  * A simple API for retrieving (immutable template) models using Thymeleaf's
  * template manager.
  * 
  * @author Emanuel Rabina
  */
+@TupleConstructor(defaults = false, includeFields = true, excludes = ['metaClass'])
 class TemplateModelFinder {
 
 	private final ITemplateContext context
-
-	/**
-	 * Constructor, set the template context we're working in.
-	 * 
-	 * @param context
-	 */
-	TemplateModelFinder(ITemplateContext context) {
-
-		this.context = context
-	}
 
 	/**
 	 * Return a model for any arbitrary item in a template.

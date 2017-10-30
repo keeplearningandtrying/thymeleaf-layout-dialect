@@ -21,9 +21,9 @@ plugins {
 	id 'net.saliman.cobertura' version '2.4.0'
 	id 'com.github.kt3k.coveralls' version '2.8.1'
 }
-apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/1.3.1/gradle-support.gradle'
-apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/1.3.1/maven-support.gradle'
-apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/1.3.1/bundle.gradle'
+apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/1.4.1/gradle-support.gradle'
+apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/1.4.1/maven-support.gradle'
+apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/1.4.1/bundle.gradle'
 
 //project.name      = 'Thymeleaf Layout Dialect'
 project.description = 'A dialect for Thymeleaf that allows you to use layout/decorator templates to style your content.'
@@ -32,7 +32,7 @@ project.sourceCompatibility = '1.7'
 
 project.group    = 'nz.net.ultraq.thymeleaf'
 project.artifact = 'thymeleaf-layout-dialect'
-project.version  = '2.2.2'
+project.version  = '2.3.0-SNAPSHOT'
 project.year     = '2012'
 project.contributors = [
 	[
@@ -51,12 +51,12 @@ project.contributors = [
 dependencies {
 	compile(
 		'nz.net.ultraq.thymeleaf:thymeleaf-expression-processor:1.1.3',
-		'org.codehaus.groovy:groovy:2.4.6',
+		'org.codehaus.groovy:groovy:2.5.0-alpha-1',
 		'org.thymeleaf:thymeleaf:3.0.0.RELEASE'
 	)
 	testCompile(
 		'junit:junit:4.12',
-		'nz.net.ultraq.thymeleaf:thymeleaf-testing-junit:2.0.0',
+		'nz.net.ultraq.thymeleaf:thymeleaf-testing-junit:2.1.0',
 		'org.thymeleaf:thymeleaf-testing:3.0.0.RELEASE'
 	)
 	testRuntime(

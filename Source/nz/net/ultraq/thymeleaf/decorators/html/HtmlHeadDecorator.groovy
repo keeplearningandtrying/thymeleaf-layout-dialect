@@ -24,27 +24,18 @@ import org.thymeleaf.context.ITemplateContext
 import org.thymeleaf.model.IModel
 import org.thymeleaf.model.IOpenElementTag
 
+import groovy.transform.TupleConstructor
+
 /**
  * A decorator specific to processing an HTML {@code <head>} element.
  * 
  * @author Emanuel Rabina
  */
+@TupleConstructor(defaults = false, includeFields = true, excludes = ['metaClass'])
 class HtmlHeadDecorator implements Decorator {
 
 	private final ITemplateContext context
 	private final SortingStrategy sortingStrategy
-
-	/**
-	 * Constructor, sets up the decorator context.
-	 * 
-	 * @param context
-	 * @param sortingStrategy
-	 */
-	HtmlHeadDecorator(ITemplateContext context, SortingStrategy sortingStrategy) {
-
-		this.context         = context
-		this.sortingStrategy = sortingStrategy
-	}
 
 	/**
 	 * Decorate the {@code <head>} part.
